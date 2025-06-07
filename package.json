@@ -1,0 +1,17 @@
+{
+  "name": "webstorm",
+  "version": "1.0.0",
+  "description": "",
+  "license": "ISC",
+  "author": "",
+  "type": "commonjs",
+  "main": "main.mjs",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "blessed": "^0.1.81",
+    "ink": "^5.2.0",
+    "react": "^18.3.1"
+  }
+}
