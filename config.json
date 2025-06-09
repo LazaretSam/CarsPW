@@ -1,0 +1,10 @@
+{
+  "excavator": 8,
+  "cars": {
+    "smallSize": 25,
+    "bigSize": 15
+  },
+  "maxWaiting": 2,
+  "guaranteedTime": 1000,
+  "randomTime": 500
+}

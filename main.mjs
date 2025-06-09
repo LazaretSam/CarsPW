@@ -1,5 +1,6 @@
 import {isMainThread, parentPort, threadId, Worker} from 'worker_threads';
 import blessed from "blessed";
+import {readFileSync} from 'node:fs';
 
 //Funkcje wspólne
 function random(max) {
@@ -19,18 +20,7 @@ let hours, minutes;
 
 if (isMainThread) {
 
-    const config = {
-        //Liczba koparek rowna się liczbie wątków - 1
-        excavator: 5,
-        cars: {
-            smallSize: 5,
-            bigSize: 15
-        },
-        //Cierpliwość pierwszego w kolejce (1 to 10 minut)
-        maxWaiting: 2,
-        guaranteedTime: 1000,
-        randomTime: 500
-    };
+    const config = JSON.parse(readFileSync('./config.json', 'utf-8'));
 
 
     const carQueue = [];
